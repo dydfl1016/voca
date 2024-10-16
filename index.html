@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Word Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #333;
+        }
+        .quiz-container {
+            margin-top: 20px;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .option {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .option:hover {
+            background-color: #dcdcdc;
+        }
+        .correct {
+            background-color: #90ee90;
+        }
+        .wrong {
+            background-color: #ffcccb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Word Quiz</h1>
+    <div class="quiz-container">
+        <!-- Question 1 -->
+        <div class="question">
+            <img src="C:\Users\user\Downloads\bowl.png" alt="bowl">
+            <div class="option" onclick="checkAnswer(this, 'correct')">bowl</div>
+            <div class="option" onclick="checkAnswer(this, 'wrong')">bag</div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <img src="C:\Users\user\Downloads\mitten.png" alt="mitten">
+            <div class="option" onclick="checkAnswer(this, 'correct')">mitten</div>
+            <div class="option" onclick="checkAnswer(this, 'wrong')">glove</div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <img src="C:\Users\user\Downloads\pear.png" alt="pear">
+            <div class="option" onclick="checkAnswer(this, 'wrong')">apple</div>
+            <div class="option" onclick="checkAnswer(this, 'correct')">pear</div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <img src="C:\Users\user\Downloads\flag.png" alt="flag">
+            <div class="option" onclick="checkAnswer(this, 'correct')">flag</div>
+            <div class="option" onclick="checkAnswer(this, 'wrong')">book</div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <img src="C:\Users\user\Downloads\mushroon.png" alt="mushroom">
+            <div class="option" onclick="checkAnswer(this, 'correct')">mushroom</div>
+            <div class="option" onclick="checkAnswer(this, 'wrong')">tree</div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(element, status) {
+            if (status === 'correct') {
+                element.classList.add('correct');
+                alert('Correct!');
+            } else {
+                element.classList.add('wrong');
+                alert('Try again!');
+            }
+        }
+    </script>
+</body>
+</html>
